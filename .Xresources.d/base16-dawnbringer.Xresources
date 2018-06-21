@@ -1,0 +1,45 @@
+! Base16 Dawn Bringer
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #140c1c
+#define base0E #442434
+#define base02 #30346d
+#define base03 #4e4a4e
+#define base04 #854c30
+#define base0F #346524
+#define base08 #d04648
+#define base07 #757161
+#define base0D #597dce
+#define base09 #d27d2c
+#define base01 #8595a1
+#define base0B #6daa2c
+#define base06 #d2aa99
+#define base0C #6dc2ca
+#define base0A #dad45e
+#define base05 #deeed6
+
+*.foreground:   base05
+#ifdef background_opacity
+*.background:   [background_opacity]base00
+#else
+*.background:   base00
+#endif
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base09
+*.color10:      base01
+*.color11:      base02
+*.color12:      base04
+*.color13:      base06
+*.color14:      base0F
+*.color15:      base07

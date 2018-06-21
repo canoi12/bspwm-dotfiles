@@ -1,0 +1,169 @@
+;=====================================================
+;     File Includes
+;=====================================================
+
+[section/base]
+include-file = /home/canoi/.config/polybar/master.conf
+include-file = /home/canoi/.config/polybar/modules.conf
+
+
+;=====================================================
+;     Openbox Bars
+;=====================================================
+
+[bar/openbox-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+modules-left   = jgmenu workspaces
+;modules-center = window_switch clock
+modules-center = music
+;modules-right  = pkg memory temperature coreuse network volume
+modules-right = battery network volume clock
+
+;=====================================================
+;     i3 Bars
+;=====================================================
+
+[bar/i3-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+#modules-left   = jgmenu i3 menu
+modules-left   = music
+;modules-center = caffeine clock
+modules-center = i3
+;modules-right  = pkg memory temperature coreuse battery network volume
+modules-right = battery network volume clock
+
+; customized
+
+override-redirect = true
+offset-y = 2
+offset-x = 18
+width=1330
+border-size = 2
+border-bottom-size = 2
+border-top-size = 2
+separator = 
+; end
+
+;tray-position = left
+;tray-detached = true
+;tray-maxsize = 16
+;tray-transparent = true
+;=====================================================
+;     Bspwm Bars
+;=====================================================
+
+[bar/bspwm-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+;modules-left = bspwm menu
+modules-left = music
+;modules-center = clock
+modules-center = bspwm
+;modules-right  = pkg memory temperature coreuse network volume
+modules-right = battery network volume clock
+
+; custom
+override-redirect = false
+wm-restack = bspwm
+offset-y = 4
+offset-x = 12
+width = 1342
+height = 28
+border-size = 0
+border-bottom-size = 0
+border-top-size = 0
+border-color = ${colors.gray}
+separator =
+padding-bottom = 0 
+underline-size = 3
+; end
+
+;===========================================================
+;     Custom Bar
+;===========================================================
+
+[bar/custom]
+inherit = bar/master
+
+override-redirect = true
+;wm-restack = i3
+bottom = true
+left = true
+border-bottom-size = 0
+radius = 4
+width = 22%
+height = 20
+offset-x = 77%
+offset-y = 3
+padding-right = 2
+separator = 
+
+modules-left =
+modules-center = 
+modules-right = battery network volume clock
+
+;===========================================================
+;     Custom Bar 2
+;===========================================================
+
+[bar/custom2]
+inherit = bar/master
+
+override-redirect = true
+;wm-restack = i3
+bottom = true
+border-bottom-size = 0
+radius = 4
+background = #00000000
+;width = 30%
+height = 20
+;offset-x = 38%
+offset-y = 2
+padding-right =
+separator = 
+
+modules-left = 
+modules-center = i3 
+modules-right =
+
+tray-position = left
+tray-detached = true
+tray-maxsize = 16
+tray-transparent = true
+
+;===========================================================
+;     Netero
+;===========================================================
+
+[bar/netero]
+inherit = bar/master
+
+bottom = true
+border-bottom-size = 0
+background = #00000000
+padding-right = 1
+margin-bottom = 0
+padding-left = 0
+;offset-y = 0
+height = 20
+separator =
+
+modules-left = 
+modules-center = i3
+modules-right = battery network volume clock
+
+tray-position = left
+tray-detached = true
+tray-maxsize = 16
+tray-transparent = true

@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+disconnected="/"
+disconnected2="\\"
+wireless_connected=""
+ethernet_connected=""
+
+FG=$(xrdb -query ~/.Xresources | grep -w '*.foreground' | awk '{print $2}' 2> /dev/null)
+
+while true; do
+    if ping -c1 8.8.8.8 &>/dev/null; then
+        ID=$(ip link | awk '/state UP/ {print $2}')
+        if [[ $ID == e* ]]; then
+            # CUSTOM CANOI
+            ESSID=$(iwgetid eno1 | awk -F\" '{print $2}')
+            
+            # END
+            #echo "$ethernet_connected" ; sleep 10
+            #echo "$ethernet_connected %{F$FG}$ESSID"; sleep 10
+            echo "$ESSID"; sleep 10
+        else
+            # CUSTOM CANOI
+            ESSID=$(iwgetid wlo1 | awk -F\" '{print $2}')
+            # END
+            #echo "$wireless_connected" ; sleep 10
+            #echo "$wireless_connected %{F$FG}$ESSID"; sleep 10
+            echo "$ESSID"; sleep 10
+        fi
+    else
+        echo "$disconnected" ; sleep 0.6
+        echo "$disconnected2" ; sleep 0.6
+    fi
+done

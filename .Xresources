@@ -1,0 +1,114 @@
+! ------------------------------------------------------------------------------
+! theme colors
+! ------------------------------------------------------------------------------
+! special
+!*.foreground: #bcbec1
+!*.background: #3f3f40
+!*.cursorColor: #bcbec1
+
+!*.color0: #3f3f40
+!*.color1: #778791
+!*.color2: #8e9296
+!*.color3: #9a9da2
+!*.color4: #9fa1a5
+!*.color5: #adafb2
+!*.color6: #bcbec1
+!*.color7: #bec1c3
+
+!*.color8: #8b8b8c
+!*.color9: #847c84
+!*.color10: #778791
+!*.color11: #8e9296
+!*.color12: #9a9da2
+!*.color13: #9fa1a5
+!*.color14: #adafb2
+!*.color15: #bcbec1
+#include ".Xresources.d/base16-ashes.Xresources"
+#define font00 xos4 Terminus
+
+!*.font: xft:xos4 Terminus:size=10.5
+
+! ------------------------------------------------------------------------------
+! xterm
+! ------------------------------------------------------------------------------
+!xterm*font: Ubuntu Mono
+xterm*font: Source Code Pro
+xterm*faceName: Ubuntu Mono:size=11:antialias=false
+xterm*loginShell: true
+xterm*vt100*geometry: 90x34
+xterm*saveLines: 2000
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName: xterm-256color
+xterm*eightBitInput: false
+
+! ------------------------------------------------------------------------------
+! URxvt
+! -----------------------------------------------------------------------------
+URxvt*saveline: 15000
+URxvt*termName: rxvt-256color
+URxvt*iso14755: false
+!URxvt*depth: 32
+URxvt*depth: 24
+!URxvt*background: [90]#2b303b
+!URxvt*background: [90]base00
+#ifdef base00
+    URxvt*background: [95]base00
+#endif
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*internalBorder: 0
+URxvt*externalBorder: 0
+URxvt*letterSpace: -1
+!URxvt.font: xft:Ubuntu Mono:size=11
+!URxvt.font: xft:Source Code Pro:size=10.5
+URxvt.font: xft:xos4 Terminus:size=10.5
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.m-c: perl:clipboard:copy
+URxvt.keysym.m-v: perl:clipboard:paste
+URxvt.urlLauncher: exo-open
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+URxvt.geometry: 90x30
+URxvt.tabbed.tabbar-fg: 4
+URxvt.tabbed.tabbar-bg: 16
+URxvt.tabbed.tab-fg: 15
+URxvt.tabbed.tab-bg: 4
+URxvt*buffered: false
+
+! ------------------------------------------------------------------------------
+! UXTerm
+! ------------------------------------------------------------------------------
+UXTerm*termName: xterm-256color
+UXTerm*cursorColor: white
+UXTerm*VT100.geometry: 90x30
+!UXTerm*font: Ubuntu Mono
+UXTerm*font: Source Code Pro
+UXTerm*faceSize: 12
+UXTerm*dynamicColors: true
+UXTerm*utf8: 2
+UXTerm*eightBitInput: true
+UXTerm*saveLines: 10000
+UXTerm*scrollKey: true
+UXTerm*scrollTtyOutput: false
+UXTerm*scrollBar: false
+UXTerm*rightScrollBar: false
+UXTerm*jumpScroll: true
+UXTerm*multiScroll: true
+UXTerm*toolBar: false
+
+! ------------------------------------------------------------------------------
+! Rofi
+! ------------------------------------------------------------------------------
+!rofi.font: Ubuntu Mono 12
+!rofi.font: Source Code Pro 10.5
+rofi.font: xos4 Terminus 10.5
+rofi.color-enabled: true
+!rofi.color-window: #2b303b, #2b303b, #2b303b
+#ifdef base00
+rofi.color-window: base00, base00, base00
+!rofi.color-normal: #2b303b, #c0c5ce, #2b303b, #8fa1b3, #2b303b
+rofi.color-normal: base00, base05, base00, base08, base00
+#endif
+rofi.separator-style: solid

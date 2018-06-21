@@ -1,0 +1,26 @@
+! ------------------------------------------------------------------------------
+! theme colors
+! ------------------------------------------------------------------------------
+! special
+*.foreground: #bcbec1
+*.background: #3f3f40
+*.cursorColor: #bcbec1
+
+*.color0: #3f3f40
+*.color1: #778791
+*.color2: #8e9296
+*.color3: #9a9da2
+*.color4: #9fa1a5
+*.color5: #adafb2
+*.color6: #bcbec1
+*.color7: #bec1c3
+
+*.color8: #8b8b8c
+*.color9: #847c84
+*.color10: #778791
+*.color11: #8e9296
+*.color12: #9a9da2
+*.color13: #9fa1a5
+*.color14: #adafb2
+*.color15: #bcbec1
+
