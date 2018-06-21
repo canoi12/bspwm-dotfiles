@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # colors
-source "$XDG_HOME/.custom/colors.sh"
+source "${HOME}/.custom/colors.sh"
 
 # key bindings
 sxhkd &
